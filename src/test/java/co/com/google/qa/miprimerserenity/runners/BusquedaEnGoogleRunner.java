@@ -9,7 +9,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)   
 @CucumberOptions( features="src/test/resources/features",
         glue = { "co.com.google.qa.miprimerserenity.stepsdefinitions" },
-        snippets =  SnippetType.CAMELCASE
+        snippets =  SnippetType.CAMELCASE,
+        plugin = {"pretty","html:target/cucumber","json:target/cucumber/cucumber.json"}
         )  
 public class BusquedaEnGoogleRunner {
 
